@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="phone.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <VerticalStackLayout>
+
+
+                <Label x:Name="Lbl" Text="E">
+
+                </Label>
+
+                <Label x:Name="OriLbl"></Label>
+
+                <Label x:Name="BattLbl"></Label>
+
+
+                <Button
+                Text="Get"
+                Clicked="Button_Clicked">
+
+                </Button>
+            </VerticalStackLayout>
+            <Rectangle HeightRequest="30" WidthRequest="100" Fill="white"></Rectangle>
+            <HorizontalStackLayout>
+                <Label Text="Clicked on: "></Label>
+                <Label x:Name="posX">X</Label>
+                <Label>;</Label>
+                <Label x:Name="posY">X</Label>
+            </HorizontalStackLayout>
+            <Grid >
+
+                <Rectangle Grid.Row="0" Grid.Column="0"  x:Name="rect" BackgroundColor="CornflowerBlue" HeightRequest="400" >
+                    <Rectangle.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Rectangle.GestureRecognizers>
+                </Rectangle>
+                <AbsoluteLayout x:Name="abs" Grid.Row="0" Grid.Column="0">
+                    <Rectangle AbsoluteLayout.LayoutBounds="10,10,0,0"  Fill="red" WidthRequest="10" HeightRequest="10" x:Name="ptr">
+
+                    </Rectangle>
+                </AbsoluteLayout>
+
+            </Grid>
+
+            <Button x:Name="clr" Text="Clear" Clicked="clr_Clicked"></Button>
+        </VerticalStackLayout>
+
+
+
+    </ScrollView>
+
+</ContentPage>
